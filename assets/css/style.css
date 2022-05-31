@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 :root {
   scroll-behavior: smooth;
+  --principal: #f38b3c;
+  --secundario: #375172;
+  --texto: #464547;
 }
+
+/* tamaños{
+  titulos: 40px;
+  subtitulos: 25px;
+  textos: 16px;
+  leyendas: 14px
+} */
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../font/Proxima-Nova-Regular.woff2?1c9ac9a7') format('woff2'),
-  url('../font/Proxima-Nova-Regular.woff?934549e7') format('woff');
+  src: 
+    url('../font/Proxima-Nova-Regular.woff2?1c9ac9a7') format('woff2'),
+    url('../font/Proxima-Nova-Regular.woff?934549e7') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: "Nova", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   color: #444444;
 }
 
@@ -26,12 +39,12 @@ a:hover {
 }
 
 h1 {
-  font-family: "NovaBold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   font-weight: bold;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: "NovaReg";
+  font-family: "Proxima Nova";
 }
 
 /*--------------------------------------------------------------
@@ -384,7 +397,7 @@ section {
   box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
   text-align: center;
   transition: 0.3s;
-  height: 100vh;
+  /* height: 100vh; */
 }
 #hero .container {
   position: relative;
@@ -392,7 +405,7 @@ section {
   text-align: center;
 }
 #hero .img-footer-hero{
-  height: 10rem;
+  height: 8rem;
   width: auto;
 }
 #hero .img-header-hero{
@@ -402,21 +415,32 @@ section {
 }
 #hero h1 {
   margin: 0px 0 40px 0;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 100px;
   font-weight: 800;
   color: #3f3f3f;
 }
 #hero h1 span {
-  color: #f38b3c;
+  color: var(--principal);
 }
 #hero h3 {
   color: #3f3f3f;
-  font-family: Proxima Nova, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+}
+#hero .tex-from-icon{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#hero .frase-footer{
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 40px;
+  font-style: italic;
 }
 #hero h2 {
   color: #3f3f3f;
-  font-family: Proxima Nova, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 #hero .description-page{
   color: #4e4e4e;
@@ -444,7 +468,7 @@ section {
 #hero .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #ffc451;
+  color: var(--principal);
 }
 #hero .icon-box h3 {
   font-weight: 700;
@@ -459,12 +483,12 @@ section {
   transition: ease-in-out 0.3s;
 }
 #hero .icon-box h3 a:hover {
-  color: #ffc451;
+  color: var(--principal);
 }
 #hero .icon-box:hover {
-  border-color: #ffc451;
+  border-color: var(--principal);
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
@@ -481,7 +505,72 @@ section {
     font-size: 20px;
     line-height: 24px;
   }
+} */
+
+/*---------------------------------------------------------------
+# arrow
+---------------------------------------------------------------*/
+
+/* .downArrow{
+	position: fixed;
+	bottom: 1%;
+	left: 50%;
+  border-color: #ffc451;
 }
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+} */
+
 /*--------------------------------------------------------------
 # preguntas Section
 --------------------------------------------------------------*/
@@ -490,7 +579,7 @@ section {
   box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
   text-align: center;
   transition: 0.3s;
-  height: 40rem;
+  height: 30rem;
 }
 #preguntas .container {
   position: relative;
@@ -502,30 +591,34 @@ section {
   width: auto;
 }
 #preguntas .img-header-hero{
-  height: 30rem;
+  height: 20rem;
   width: auto;
   border-radius: 5px;
 }
-#preguntas h1 {
-  margin: 0px 0 40px 0;
-  font-size: 60px;
-  line-height: 100px;
-  font-weight: 800;
-  color: #3f3f3f;
+/* #preguntas h1 {
+  
+} */
+.preguntas .title-page {
+  font-family: "Proxima Nova", sans-serif;
+  text-align: left;
+  margin: 0px 0 30px 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--texto);
 }
-#preguntas h1 span {
-  color: #f38b3c;
-}
+/* #preguntas h1 span {
+  color: var(--principal);
+} */
 #preguntas h3 {
-  color: #3f3f3f;
-  font-family: Proxima Nova, sans-serif;
+  color: var(--texto);
+  font-family: "Proxima Nova", sans-serif;
 }
 #preguntas h2 {
-  color: #3f3f3f;
-  font-family: Proxima Nova, sans-serif;
+  color: var(--texto);
+  font-family: "Proxima Nova", sans-serif;
 }
 #preguntas .description-page{
-  color: #4e4e4e;
+  color: var(--texto);
   text-align: left;
   font-size: 30px;
   padding-bottom: 10px;
@@ -536,32 +629,40 @@ section {
   text-align: center;
   font-size: 25px;
 }
+#preguntas .navbar {
+  align-content: center;
+}
 #preguntas .contactanos, .navbar .contactanos:focus {
   background: #fff;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #f38b3c;
-  border: 1px solid #f38b3c;
+  color: var(--principal);
+  border: 1px solid var(--principal);
 }
 #preguntas .contactanos:hover, .navbar .contactanos:focus:hover {
-  color: #f38b3c;
+  color: var(--principal);
   background: #fff;
 }
 #preguntas .experto, .navbar .experto:focus {
-  background: #f38b3c;
+  background: var(--principal);
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
   color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 #preguntas .experto:hover, .navbar .experto:focus:hover {
   color: #fff;
-  background: #f38b3c;
+  background: var(--principal);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 #preguntas .text-page{
   text-align: left;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 #preguntas .icon-box {
   padding: 30px 20px;
@@ -573,7 +674,7 @@ section {
 #preguntas .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #ffc451;
+  color: var(--principal);
 }
 #preguntas .icon-box h3 {
   font-weight: 700;
@@ -588,12 +689,12 @@ section {
   transition: ease-in-out 0.3s;
 }
 #preguntas .icon-box h3 a:hover {
-  color: #ffc451;
+  color: var(--principal);
 }
 #preguntas .icon-box:hover {
-  border-color: #ffc451;
+  border-color: var(--principal);
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #preguntas {
     background-attachment: fixed;
   }
@@ -610,7 +711,7 @@ section {
     font-size: 20px;
     line-height: 24px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -756,19 +857,13 @@ section {
 --------------------------------------------------------------*/
 .fraseGancho {
   height: 20rem;
-  background-color: #f38b3c;
+  background-color: var(--principal);
 }
 .fraseGancho h1 {
   padding-top: 20px;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 1000;
   color: #fff;
-}
-.fraseGancho h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #4154f1;
-  text-transform: uppercase;
 }
 .fraseGancho h2 {
   font-size: 24px;
@@ -776,9 +871,26 @@ section {
   color: #012970;
 }
 .fraseGancho p {
+  font-family: 'Caveat', cursive;
   margin: 30px 0 30px 0;
-  line-height: 24px;
+  line-height: 20px;
+  font-size: 35px;
   color: #fff;
+}
+.fraseGancho .recuadro {
+  position: relative;
+  background-color: var(--secundario);
+  height: 35px;
+}
+.fraseGancho h3 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
 }
 .fraseGancho .btn-read-more {
   line-height: 0;
@@ -789,8 +901,8 @@ section {
   background: #4154f1;
   box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
 }
-.fraseGancho .btn-read-more span {
-  font-family: "Nunito", sans-serif;
+.fraseGancho .p {
+  font-family: "Caveat";
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -861,7 +973,7 @@ section {
 # itemsc - Items Centrales
 --------------------------------------------------------------*/
 .itemsc {
-  padding: 70px 0 60px;
+  padding: 70px 0 35px;
 }
 .itemsc .count-box {
   display: flex;
@@ -871,37 +983,30 @@ section {
   background: #fff;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
 }
-.itemsc .count-box i {
-  font-size: 42px;
-  line-height: 0;
-  margin-right: 20px;
-  color: #4154f1;
+.itemsc h3 {
+  font-size: 20px;
+  font-weight: bold;
 }
+
 .itemsc .img-items-central {
-  height: 5rem;
+  height: 2rem;
   width: auto;
   padding-right: 2rem;
 }
 .itemsc .count-box {
   height: 20rem;
+  border-radius: 10px;
 }
-.itemsc .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #0b198f;
-}
+
 .itemsc .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
 }
 /*--------------------------------------------------------------
 # reingenieriaGrafico - Items Reingenieria
 --------------------------------------------------------------*/
 .reingenieriaGrafico {
-  padding: 70px 0 60px;
+  padding: 35px 0 35px;
 }
 .reingenieriaGrafico .count-box {
   display: flex;
@@ -934,41 +1039,66 @@ section {
 .reingenieriaGrafico .bloque {
   display: flex;
   align-items: center;
-  background-color: #f38b3c;
-  font-size: 20px;
-  color: #fff;
-  height: 30rem;
+  background-color: var(--principal);
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .reingenieriaGrafico .recuadro {
-  background-color: #3f3f3f;
-  font-size: 14px;
+  background-color: var(--secundario);
+  height: 35px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.reingenieriaGrafico h3 {
+  text-align-last: center;
+  width: 100%;
+  font-size: 12px;
   color: #fff;
-  padding-bottom: 5px;
+  text-transform: uppercase;
 }
 .reingenieriaGrafico .image-logo {
   width: 10rem;
   height: auto;
+  margin-bottom: 8rem;
+  margin-top: 20px;
 }
 .reingenieriaGrafico .image-grafico {
   display: flex;
   align-items: center;
   height: 32rem;
   width: auto;
+  margin-left: 100px;
+}
+.reingenieriaGrafico .title {
+  font-family: "Proxima Nova", sans-serif;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.reingenieriaGrafico .frase {
+  font-family: 'Caveat', cursive;
+  color: #fff;
+  font-size: 25px;
+  /* font-weight: bold; */
+  line-height: 1.3;
 }
 .reingenieriaGrafico .hr-line {
-  width: 10px;
-  height: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 20%;
+  height: 4px;
   color: #80230c;
 }
-.reingenieriaGrafico .cuadro {
+/* .reingenieriaGrafico .cuadro {
   height: 10rem;
   margin-bottom: 5rem;
-}
+} */
 /*--------------------------------------------------------------
 # reingenieriaItems - Items Reingenieria
 --------------------------------------------------------------*/
 .reingenieriaItems {
-  padding: 70px 0 60px;
+  padding: 35px 0 35px;
 }
 .reingenieriaItems .count-box {
   display: flex;
@@ -1001,40 +1131,183 @@ section {
 .reingenieriaItems .bloque {
   display: flex;
   align-items: center;
-  background-color: #f38b3c;
-  font-size: 20px;
-  color: #fff;
-  height: 30rem;
+  background-color: var(--principal);
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .reingenieriaItems .recuadro {
-  background-color: #3f3f3f;
-  font-size: 14px;
+  background-color: var(--secundario);
+  height: 35px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.reingenieriaItems .title {
+  font-family: "Proxima Nova", sans-serif;
   color: #fff;
-  padding-bottom: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.reingenieriaItems h3 {
+  text-align-last: center;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
 }
 .reingenieriaItems .image-logo {
   width: 10rem;
   height: auto;
+  margin-bottom: 8rem;
 }
 .reingenieriaItems .image-cuadro {
-  height: 5rem;
+  height: 4rem;
   width: auto;
 }
 .reingenieriaItems .hr-line {
-  width: 10px;
-  height: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 20%;
+  height: 4px;
   color: #80230c;
 }
 .reingenieriaItems .cuadro {
   height: 10rem;
   margin-bottom: 5rem;
 }
+.reingenieriaItems .texto-cuadros {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--secundario);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reingenieriaItems .descripcion-cuadros {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*--------------------------------------------------------------
+# demo - Items Reingenieria
+--------------------------------------------------------------*/
+.demo {
+  padding: 70px 0 60px;
+}
+.demo .count-box {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+.demo .count-box i {
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+  color: #4154f1;
+}
+.demo .img-items-central {
+  height: 5rem;
+  width: auto;
+  padding-right: 2rem;
+}
+.demo .count-box {
+  height: 20rem;
+}
+.demo .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #0b198f;
+}
+.demo .bloque {
+  font-family: "Proxima Nova", sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: var(--principal);
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 35rem;
+  font-size: 40px;
+}
+.demo .recuadro {
+  background-color: var(--secundario);
+  height: 35px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.demo .formulario {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.demo h3 {
+  text-align-last: center;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.demo h1 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--texto);
+  margin-bottom: 40px;
+}
+.demo .text-azul {
+  color: var(--secundario);
+}
+.demo .text-rojo {
+  color: red;
+}
+.demo .image-logo {
+  width: 25rem;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.demo .title {
+  font-family: "Proxima Nova", sans-serif;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.demo .frase {
+  font-family: 'Caveat', cursive;
+  color: #fff;
+  font-size: 25px;
+  /* font-weight: bold; */
+  line-height: 1.3;
+}
+.demo .enviar {
+  background: var(--principal);
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+}
+.demo .hr-line {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 20%;
+  height: 4px;
+  color: #80230c;
+}
 
 /*--------------------------------------------------------------
 # itemsConTexto - Items Reingenieria
 --------------------------------------------------------------*/
 .itemsConTexto {
-  padding: 70px 0 60px;
+  padding: 35px 0 35px;
 }
 .itemsConTexto .count-box {
   display: flex;
@@ -1068,19 +1341,33 @@ section {
   display: flex;
   align-items: center;
   background-color: #f7f7f7;
-  color: rgb(0, 0, 0);
-  height: 30rem;
+  color: var(--texto);
+  height: 25rem;
+  border-radius: 10px 0px 0px 10px;
+  line-height: 1.3;
 }
 .itemsConTexto .title {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+.itemsConTexto .title-items {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1;
+  text-align: left;
+}
+.itemsConTexto .text-description {
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+}
 .itemsConTexto .subtitle {
   font-size: 20px;
 }
 .itemsConTexto .recuadro {
-  background-color: #3f3f3f;
+  background-color: #7a7676;
   font-size: 14px;
   color: #fff;
   padding-bottom: 5px;
@@ -1090,20 +1377,18 @@ section {
   height: auto;
 }
 .itemsConTexto .image-cuadro {
-  height: 5rem;
+  height: 6rem;
   width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.itemsConTexto .hr-line {
-  width: 10px;
-  height: 5px;
-  color: #80230c;
-}
+
 .itemsConTexto .cuadro {
   height: 25rem;
   margin-left: 3rem;
   width: 15rem;
   margin-bottom: 5rem;
-  border: 1px solid #747272;
+  border: 0.5px solid #46454754;
   border-radius: 10px;
 }
 
@@ -1145,7 +1430,7 @@ section {
 --------------------------------------------------------------*/
 #contador {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   background: url("../img/recurso17.jpg") top center;
   background-size: cover;
   position: relative;
@@ -1170,10 +1455,16 @@ section {
   color: #fff;
   height: 30rem;
 }
+#contador .contadores {
+  display: flex;
+  align-items: center;
+}
 #contador .title {
-  font-size: 25px;
-  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 10px;
+  text-align: left;
 }
 #contador .subtitle {
   font-size: 20px;
@@ -1189,8 +1480,9 @@ section {
   height: auto;
 }
 #contador .image-cuadro {
-  height: 5rem;
+  height: 4rem;
   width: auto;
+  margin-bottom: 20px;
 }
 #contador .hr-line {
   width: 10px;
@@ -1204,11 +1496,141 @@ section {
 }
 #contador .numero {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 #contador .texto {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# ayuda - Items Reingenieria
+--------------------------------------------------------------*/
+.ayuda {
+  padding: 70px 0 20px;
+}
+.ayuda .count-box {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+.ayuda .count-box i {
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+  color: #4154f1;
+}
+.ayuda .img-items-central {
+  height: 5rem;
+  width: auto;
+  padding-right: 2rem;
+}
+.ayuda .count-box {
+  height: 20rem;
+}
+.ayuda .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #0b198f;
+}
+.ayuda .bloque {
+  display: flex;
+  align-items: center;
+  background-color: var(--principal);
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.ayuda .recuadro {
+  background-color: var(--secundario);
+  height: 35px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.ayuda .title {
+  font-family: "Proxima Nova", sans-serif;
+  color: var(--secundario);
+  font-size: 25px;
+  text-align: center;
+}
+.ayuda h3 {
+  text-align-last: center;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.ayuda .image-logo {
+  width: 10rem;
+  height: auto;
+  margin-bottom: 8rem;
+}
+.ayuda .image-cuadro {
+  height: 4rem;
+  width: auto;
+}
+.ayuda .hr-line {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 20%;
+  height: 4px;
+  color: #80230c;
+}
+.ayuda .cuadro {
+  height: 8rem;
+  margin-bottom: 5rem;
+  overflow: auto;
+}
+.ayuda .image {
+  float: left;
+}
+.ayuda .image img {
+  display: block;
+}
+.ayuda .contenedor-textos {
+  margin-left: 5rem;
+}
+.ayuda .texto-cuadros {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secundario);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ayuda .description {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.ayuda h2 {
+  font-size: 23px;
+  font-weight: bold;
+}
+.ayuda .title-1{
+  color: #158fce;
+}
+.ayuda .title-2{
+  color: #f6a000;
+}
+.ayuda .title-3{
+  color: #ee7c36;
+}
+.ayuda .title-4{
+  color: #00a99d;
+}
+.ayuda .p-description {
+  font-size: 20px;
+}
+.ayuda p {
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
